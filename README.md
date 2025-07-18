@@ -1,5 +1,5 @@
 <h2>This example project is cloned from github <a href="https://github.com/monikakonieczna/playwright-ts-project">repo</a> by user <a href="https://github.com/monikakonieczna">monikakonieczna</a>
-##The original provided an example project with automated tests for the mock online store <a href="https://www.saucedemo.com/">Swag Labs</a></h2>
+The original provided an example project with automated tests for the mock online store <a href="https://www.saucedemo.com/">Swag Labs</a></h2>
 
 <h3>Test scenarios covered in the original repo grouped by functionality:</h3>
 1. Login
