@@ -7,11 +7,11 @@ export default class LoginPage {
     }
 
     async enterUsername(username: string) {
-        await this.page.locator(selectors.LoginPage.usernameInput).type(username);
+        await this.page.locator(selectors.LoginPage.usernameInput).fill(username);
     }
 
     async enterPassword(password: string) {
-        await this.page.locator(selectors.LoginPage.passwordInput).type(password);
+        await this.page.locator(selectors.LoginPage.passwordInput).fill(password);
     }
 
 

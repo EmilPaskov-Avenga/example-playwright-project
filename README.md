@@ -1,44 +1,39 @@
-<h1>
-  Practice test automation with <a href="https://playwright.dev/"> <img width="140" alt="Playwright Logo" src="https://raw.githubusercontent.com/github/explore/60cd2530141f67f07a947fa2d310c482e287e387/topics/playwright/playwright.png" /> </a> on <a href="https://www.saucedemo.com/">Swag Labs</a>
-</h1>
+##This example project is cloned from github <a href="https://github.com/monikakonieczna/playwright-ts-project">repo</a> by user <a href="https://github.com/monikakonieczna">monikakonieczna</a>
+##The original provided an example project with automated tests for the mock online store <a href="https://www.saucedemo.com/">Swag Labs</a>
 
-> **Note**
->
-> +  **<a href="https://www.demoblaze.com/">Swag Labs</a>** is basic online store with required login from Sauce Labs. Great for example web UI tests.
->
-## PLaywright features
-End to End testing using:
+###Test scenarios covered in the original repo grouped by functionality:
+1. Login
+	- Positive scenario: login with user - standard, problem and performance user (all seprate tests)
+	- Negative scenatio: login wihtout credentials
+	- Negative scenario: login without password
+	- Negative scenario: login without usernanme
 
-- Playwright https://playwright.dev/
-- TypeScript https://www.typescriptlang.org/
+2. Cart
+	- Positive scenario: User adds Backpack item to the cart and check the cart page for update
+	- Positive scenario: User adds Backpack item to the cart and check the cart badge for update
+	- Positive scenario: User adds Backpack item to the cart and removes it from the cart via the products page button
+	- Positive scenario: User adds Backpack item to the cart and then adds a Bike-light item to the cart
 
-This tests are purely for Playwright features practice, usage of Page Object Model.
-
-## Getting Started
-
-### Prerequisites
-Install Playwright and browser binaries for Chromium, Firefox and WebKit.
-```shell
-npm i -D playwright
-```
-You need to have Node.js installed.
-
-## Useful Commands
-
-### Run All Tests
-
-```shell
-npm run play:test
-```
-### Run Tests for Sorting Feature
-```shell
-npm run test-s
-```
-### Run Tests for Login Feature
-```shell
-npm run test-l
-```
-### Run Tests for Cart Feature
-```shell
-npm run test-c
-```
+3. Products page sorting
+	- Positive scenario: Sort items via price low to high
+	- Positive scenario: Sort items via price high to low
+	- Positive scenario: Sort items via name a to z 
+	- Positive scenario: Sort items via name z to a
+	
+###Test scenarios added with this project
+1. Login
+	- Positive scenario: Login after unsuccessfull login attempt when not inputting password
+	- Positive scenario: Login after unsuccessfull login attempt when not inputting username
+	
+2. Products page
+	- Positive scenario: User presses the About link in the side menu
+	
+3. Single product page:
+	- Positive scenario: User adds Backapck item to the cart and check the cart page for update
+	
+###Other new additions in this repo
+- Implemented trace recording instead of video for each test
+	
+###Tests and functionalities to be added in the future:
+[ ] Add parameters to single product so that they cover every product available
+[ ] Add addtional tests for login to check automatic timeout and logout

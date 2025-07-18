@@ -13,6 +13,11 @@ export default class ProductsPage {
         [Select.SORT, selectors.ProductsPage.sortSelect]
     ])
 
+    async burgerButton () {
+        await this.page.locator(selectors.ProductsPage.burgerButton).click();
+    }
+    
+
     get getTitle() {
         return this.page.locator(selectors.ProductsPage.pageTittle).textContent();
     }
@@ -31,6 +36,14 @@ export default class ProductsPage {
 
     async navigateToCart() {
         await this.page.locator(selectors.ProductsPage.cartLink).click();
+    }
+
+    async clickAboutLink(){
+        return this.page.locator(selectors.ProductsPage.aboutLink).click();
+    }
+
+    async openBackpackPage(){
+        return this.page.locator(selectors.ProductsPage.backpackButton).click();
     }
 
     get getTextFromBackpackButton() {

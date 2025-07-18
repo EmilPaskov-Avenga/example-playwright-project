@@ -6,13 +6,23 @@
         "pageTittle": "span[class='title']",
         "cartBadge": ".shopping_cart_badge",
         "cartLink": ".shopping_cart_link",
-        "backpackButton": "button[data-test*='backpack']"
+        "backpackButton": "button[data-test*='backpack']",
+        "burgerButton": ".bm-burger-button",
+        "aboutLink": "[data-test='about-sidebar-link']"
     },
     "LoginPage": {
         "usernameInput": "input[data-test='username']",
         "passwordInput": "input[data-test='password']",
         "loginButton": "input[data-test='login-button']",
         "errorMessage": "h3[data-test='error']"
+    },
+    "ProductPage":{
+        "backToProducts": "button[data-test*='back-to-products']",
+        "addToCart": "button[data-test*='add-to-cart']",
+        "remove": "button[data-test*='remove']",
+        "cartBadge": ".shopping_cart_badge",
+        "cartLink": ".shopping_cart_link",
+        "itemName": ".inventory_item_name"
     },
     "CartPage": {
         "pageTittle": ".title",

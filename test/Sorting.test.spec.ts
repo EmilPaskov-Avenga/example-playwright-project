@@ -65,4 +65,11 @@ test.describe("Sorting Feature. @sorting", async () => {
         expect(haveSameOrder).toBe(true);
     });
 
+    test("Positive: Press burger button and about link appears", async ({page}) => {
+        await productsPage.burgerButton();
+        await productsPage.clickAboutLink();
+
+        expect(page.title).toContain('Sauce Labs');
+    });
+
 })

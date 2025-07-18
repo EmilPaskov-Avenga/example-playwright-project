@@ -78,4 +78,31 @@ test.describe("Login Feature @login", async () => {
 
         expect(await loginPage.getErrorMessage).toBe("Epic sadface: Username is required");
     });
+
+    test("Positive: Standard user tries to login with correct credentials after missing password mistake.", async ({page}) => {
+        await loginPage.enterUsername(users.standard.username);
+
+        await loginPage.clickLoginButon();
+        
+        await loginPage.enterPassword(users.standard.password);
+        await loginPage.clickLoginButon();
+        
+        const productsPage = new ProductsPage(page);
+
+        expect (await productsPage.getTitle).toBe("Products");
+    });
+
+    test("Positive: Standard user tries to login with correct credenetials after missing username mistake.", async ({page}) => {
+        await loginPage.enterPassword(users.standard.password);
+
+        await loginPage.clickLoginButon();
+
+        await loginPage.enterUsername(users.standard.username);
+        await loginPage.enterPassword(users.standard.password);
+        await loginPage.clickLoginButon();
+
+        const productsPage = new ProductsPage(page);
+
+        expect (await productsPage.getTitle).toBe("Products");
+    });
 })

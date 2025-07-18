@@ -5,14 +5,15 @@ const config: PlaywrightTestConfig = {
     //testMatch: ["test/"],
     use: {
         baseURL: "https://www.saucedemo.com/",
-        headless: false,
+        headless: true,
         screenshot: "on",
-        video: "on",
+        //video: "on",
+        trace: "on",
         launchOptions: {
             // slowMo: 1000
         },
     },
-    timeout: 60 * 1000 * 5,
+    timeout: 10 * 1000,
     retries: 0,
     reporter: [["dot"], ["json", {
         outputFile: "jsonReports/jsonReport.json"
